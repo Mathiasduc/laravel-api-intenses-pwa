@@ -18,7 +18,6 @@ class CreateDevicesTable extends Migration
             $table->text('hexaID', 10);
             $table->timestamps();
             $table->string('location');
-            $table->time('installed_at');
             $table->string('name', 50);
             $table->string('comment');
         });
