@@ -15,4 +15,13 @@ class DeviceController extends Controller
     	$device->name = $request->name;
     	$device->save();
     }
+
+    public function authentification(Request $request)
+    {
+    	if ($request->name === 'error'){
+    		abort(403, 'Wrong loggin');
+    	}else{
+    		return response('Authentified',200);
+    	}
+    }
 }
